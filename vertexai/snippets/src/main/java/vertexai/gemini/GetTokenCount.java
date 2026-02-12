@@ -28,7 +28,7 @@ public class GetTokenCount {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-google-cloud-project-id";
     String location = "us-central1";
-    String modelName = "gemini-2.0-flash-001";
+    String modelName = "gemini-2.5-flash";
 
     getTokenCount(projectId, location, modelName);
   }
