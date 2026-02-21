@@ -23,7 +23,6 @@ import static com.google.common.truth.Truth.assertWithMessage;
 
 import com.google.cloud.testing.junit4.MultipleAttemptsRule;
 import com.google.gson.Gson;
-import com.google.gson.annotations.SerializedName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +30,6 @@ import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Arrays;
-import java.util.Base64;
 import java.util.stream.Collectors;
 import javax.net.ssl.HttpsURLConnection;
 import org.junit.After;
@@ -191,28 +189,6 @@ public class SnippetsIT {
     assertThat(output).ignoringCase().contains("Pixel");
     assertThat(output).ignoringCase().contains("Tokyo");
   }
-
-  // @Test
-  // public void testGroundingWithPublicData() throws Exception {
-  //   String output =
-  //       GroundingWithPublicData.groundWithPublicData(PROJECT_ID, LOCATION, GEMINI_FLASH_1_5);
-
-  //   assertThat(output).ignoringCase().contains("Rayleigh");
-  // }
-
-  // @Test
-  // public void testGroundingWithPrivateData() throws Exception {
-  //   String output =
-  //       GroundingWithPrivateData.groundWithPrivateData(
-  //           PROJECT_ID,
-  //           LOCATION,
-  //           GEMINI_FLASH,
-  //           String.format(
-  //               "projects/%s/locations/global/collections/default_collection/dataStores/%s",
-  //               PROJECT_ID, DATASTORE_ID));
-
-  //   assertThat(output).ignoringCase().contains("DMV");
-  // }
 
   @Test
   public void testMultimodalStreaming() throws Exception {
